@@ -8,9 +8,8 @@ public class IngresosTotales {
 		int contarVip = 0;
 		int contarPlatea = 0;
 		int contarBalcon = 0;
-
-		for (int i = 0; i < RegistroEntradas.getEntradas().size(); i++) {
-			Entradas entrada = RegistroEntradas.getEntradas().get(i);
+		
+		for (Entradas entrada : RegistroEntradas.getEntradas()) {
 			sumaCostoBase += entrada.getCostoBaseEntrada();
 			sumaTotales += entrada.getCostoTotal();
 
@@ -27,24 +26,11 @@ public class IngresosTotales {
 		Decorativo.separadorLinea();
 		Mensajes.imprimirCentrado("****** INGRESOS TOTALES ******", ColorTexto.NEGRO_CYAN);
 		System.out.println();
-		if (contarVip >= 1) {
-			ColorTexto.colorTexto("Ventas ubicación VIP   : " + contarVip + "\n", ColorTexto.CYAN);
-			ColorTexto.colorTexto("Valor unitario VIP     : $" + Main.PRECIO_VIP + "\n", ColorTexto.VERDE);
-			ColorTexto.colorTexto("Costo total base VIP   : $" + (contarVip * Main.PRECIO_VIP) + "\n", ColorTexto.AMARILLO);
-			Decorativo.separadorSegmentadoCyan();
-		}
-		if (contarPlatea >= 1) {
-			ColorTexto.colorTexto("Ventas ubicación Platea: " + contarPlatea + "\n", ColorTexto.CYAN);
-			ColorTexto.colorTexto("Valor unitario Platea  : $" + Main.PRECIO_PLATEA + "\n", ColorTexto.VERDE);
-			ColorTexto.colorTexto("Costo total base Platea: $" + (contarPlatea * Main.PRECIO_PLATEA) + "\n", ColorTexto.AMARILLO);
-			Decorativo.separadorSegmentadoCyan();
-		}
-		if (contarBalcon >= 1) {
-			ColorTexto.colorTexto("Ventas ubicación Balcón: " + contarBalcon + "\n", ColorTexto.CYAN);
-			ColorTexto.colorTexto("Valor unitario Balcón  : $" + Main.PRECIO_BALCON + "\n", ColorTexto.VERDE);
-			ColorTexto.colorTexto("Costo total base Balcón: $" + (contarBalcon * Main.PRECIO_BALCON) + "\n", ColorTexto.AMARILLO);
-			Decorativo.separadorSegmentadoCyan();
-		}
+		
+        imprimirDetalleUbicacion("VIP   ", contarVip, Main.PRECIO_VIP);
+        imprimirDetalleUbicacion("PLATEA", contarPlatea, Main.PRECIO_PLATEA);
+        imprimirDetalleUbicacion("BALCÓN", contarBalcon, Main.PRECIO_BALCON);
+		
 		System.out.println();
 		Decorativo.separadorSegmentadoCyanNegro();
 		ColorTexto.colorTexto("Ventas totales         : " + RegistroEntradas.entradasVendidas + "\n",	ColorTexto.CYAN);
@@ -57,5 +43,13 @@ public class IngresosTotales {
 		ColorTexto.colorTexto("\n\nPresione Enter para continuar...", ColorTexto.AMARILLO);
 		EntradaUsuario.getScanner().nextLine();
 	}
-
+	
+	private static void imprimirDetalleUbicacion(String ubicacion, int cantidad, int precio) {
+        if (cantidad > 0) {
+            ColorTexto.colorTexto("Ventas ubicación " + ubicacion + ": " + cantidad + "\n", ColorTexto.CYAN);
+            ColorTexto.colorTexto("Valor unitario " + ubicacion + "  : $" + precio + "\n", ColorTexto.VERDE);
+            ColorTexto.colorTexto("Costo total base " + ubicacion + ": $" + (cantidad * precio) + "\n", ColorTexto.AMARILLO);
+            Decorativo.separadorSegmentadoCyan();
+        }
+    }
 }

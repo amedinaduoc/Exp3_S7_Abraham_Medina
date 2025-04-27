@@ -14,15 +14,7 @@ public class MenuPrincipal {
 					ColorTexto.RESET_COLOR);
 			ColorTexto.seleccion("\nIngrese el número de la opción deseada: ");
 			
-			
 			opcionMenu = EntradaUsuario.leerValidarEntero();
-//			try {
-//				opcionMenu = EntradaUsuario.getScanner().nextInt();
-//				EntradaUsuario.getScanner().nextLine();
-//			} catch (InputMismatchException e) {
-//				EntradaUsuario.getScanner().nextLine();
-//				opcionMenu = 0;
-//			}
 			
 			switch (opcionMenu) {
 			case 1:

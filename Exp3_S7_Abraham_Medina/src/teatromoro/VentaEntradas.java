@@ -80,16 +80,4 @@ public class VentaEntradas {
 		Entradas entrada = RegistroEntradas.guardarEntrada(ubicacionSeleccionada, precioSeleccionado, compradorSeleccionado, descuentoSeleccionado);
 		GenerarBoleta.mostrarBoleta(entrada);
 	}
-
-//	private static int leerValidarEntero() {
-//		int numero;
-//		try {
-//			numero = EntradaUsuario.getScanner().nextInt();
-//			EntradaUsuario.getScanner().nextLine();
-//		} catch (InputMismatchException e) {
-//			EntradaUsuario.getScanner().nextLine();
-//			numero = 0;
-//		}
-//		return numero;
-//	}
 }
