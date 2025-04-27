@@ -9,8 +9,12 @@ public class Decorativo {
 		ColorTexto.colorTexto("-".repeat(ANCHO_CONSOLA) + "\n", ColorTexto.AMARILLO);
 	}
 
-	public static void separadorSegmentado() {
-		ColorTexto.colorTexto("-".repeat(ANCHO_CONSOLA + 7) + "\n", ColorTexto.CYAN);
+	public static void separadorSegmentadoCyan() {
+		ColorTexto.colorTexto("-".repeat(ANCHO_CONSOLA + 8) + "\n", ColorTexto.CYAN);
+	}
+	
+	public static void separadorSegmentadoCyanNegro() {
+		ColorTexto.colorTexto("-".repeat(ANCHO_CONSOLA + 8) + "\n", ColorTexto.CYAN_NEGRO);
 	}
 
 	public static void separadorSegmentadoCentro() {

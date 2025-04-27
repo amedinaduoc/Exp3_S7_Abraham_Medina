@@ -30,34 +30,31 @@ public class IngresosTotales {
 		if (contarVip >= 1) {
 			ColorTexto.colorTexto("Ventas ubicación VIP   : " + contarVip + "\n", ColorTexto.CYAN);
 			ColorTexto.colorTexto("Valor unitario VIP     : $" + Main.PRECIO_VIP + "\n", ColorTexto.VERDE);
-			ColorTexto.colorTexto("Costo total base VIP   : $" + (contarVip * Main.PRECIO_VIP) + "\n",
-					ColorTexto.AMARILLO);
-			Decorativo.separadorSegmentado();
+			ColorTexto.colorTexto("Costo total base VIP   : $" + (contarVip * Main.PRECIO_VIP) + "\n", ColorTexto.AMARILLO);
+			Decorativo.separadorSegmentadoCyan();
 		}
 		if (contarPlatea >= 1) {
 			ColorTexto.colorTexto("Ventas ubicación Platea: " + contarPlatea + "\n", ColorTexto.CYAN);
 			ColorTexto.colorTexto("Valor unitario Platea  : $" + Main.PRECIO_PLATEA + "\n", ColorTexto.VERDE);
-			ColorTexto.colorTexto("Costo total base Platea: $" + (contarPlatea * Main.PRECIO_PLATEA) + "\n",
-					ColorTexto.AMARILLO);
-			Decorativo.separadorSegmentado();
+			ColorTexto.colorTexto("Costo total base Platea: $" + (contarPlatea * Main.PRECIO_PLATEA) + "\n", ColorTexto.AMARILLO);
+			Decorativo.separadorSegmentadoCyan();
 		}
 		if (contarBalcon >= 1) {
 			ColorTexto.colorTexto("Ventas ubicación Balcón: " + contarBalcon + "\n", ColorTexto.CYAN);
 			ColorTexto.colorTexto("Valor unitario Balcón  : $" + Main.PRECIO_BALCON + "\n", ColorTexto.VERDE);
-			ColorTexto.colorTexto("Costo total base Balcón: $" + (contarBalcon * Main.PRECIO_BALCON) + "\n",
-					ColorTexto.AMARILLO);
-			Decorativo.separadorSegmentado();
+			ColorTexto.colorTexto("Costo total base Balcón: $" + (contarBalcon * Main.PRECIO_BALCON) + "\n", ColorTexto.AMARILLO);
+			Decorativo.separadorSegmentadoCyan();
 		}
-		ColorTexto.colorTexto("\nVentas totales         : " + RegistroEntradas.entradasVendidas + "\n",
-				ColorTexto.CYAN);
+		System.out.println();
+		Decorativo.separadorSegmentadoCyanNegro();
+		ColorTexto.colorTexto("Ventas totales         : " + RegistroEntradas.entradasVendidas + "\n",	ColorTexto.CYAN);
 		ColorTexto.colorTexto("Costo total base       : $" + sumaCostoBase + "\n", ColorTexto.AMARILLO);
 		ColorTexto.colorTexto("Total descuentos       : $" + (sumaCostoBase - sumaTotales) + "\n", ColorTexto.VERDE);
-		Decorativo.separadorSegmentado();
+		Decorativo.separadorSegmentadoCyanNegro();
 		ColorTexto.colorTexto("Ingresos totales       : $" + sumaTotales + "\n", ColorTexto.VERDE_NEGRO);
-		Decorativo.separadorSegmentado();
+		Decorativo.separadorSegmentadoCyanNegro();
 
 		ColorTexto.colorTexto("\n\nPresione Enter para continuar...", ColorTexto.AMARILLO);
-		EntradaUsuario.getScanner().nextLine();
 		EntradaUsuario.getScanner().nextLine();
 	}
 

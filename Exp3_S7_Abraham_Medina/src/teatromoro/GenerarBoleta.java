@@ -20,6 +20,5 @@ public class GenerarBoleta {
 
 		ColorTexto.seleccion("\n\nPresione Enter para continuar...");
 		EntradaUsuario.getScanner().nextLine();
-		EntradaUsuario.getScanner().nextLine();
 	}
 }
