@@ -1,7 +1,6 @@
 package teatromoro;
 
 public class Entradas {
-
 	private int id;
 	private String ubicacion;
 	private int costoBaseEntrada;
@@ -9,8 +8,10 @@ public class Entradas {
 	private String descuento;
 	private int costoTotal;
 
-	public Entradas(int id, String ubicacion, int costoBaseEntrada, String tipoEntrada, String descuento,
-			int costoTotal) {
+	public Entradas(int id, String ubicacion, int costoBaseEntrada, String tipoEntrada, String descuento, int costoTotal) {
+	    if (id <= 0 || ubicacion == null || ubicacion.isEmpty()) {
+	        throw new IllegalArgumentException("Datos inválidos en la entrada");
+	    }
 		this.id = id;
 		this.ubicacion = ubicacion;
 		this.costoBaseEntrada = costoBaseEntrada;
@@ -75,8 +76,8 @@ public class Entradas {
 					return
 				    "Compra N°         : " + id
 				+ "\nUbicación         : " + ubicacion
-				+ "\nCosto base        : $"+ costoBaseEntrada
+				+ "\nCosto base        : "+ Decorativo.formatoPrecio.format(costoBaseEntrada)
 				+ "\nDescuento Aplicado: " + descuento
-				+ "\nCosto Final       : $"+ costoTotal;
+				+ "\nCosto Final       : "+ Decorativo.formatoPrecio.format(costoTotal);
 	}
 }

@@ -12,6 +12,7 @@ public class EntradaUsuario {
 
 	static int leerValidarEntero() {
 		int numero;
+		
 		try {
 			numero = EntradaUsuario.getScanner().nextInt();
 			EntradaUsuario.getScanner().nextLine();

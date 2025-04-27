@@ -4,12 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RegistroEntradas {
-
 	private static List<Entradas> listaEntradas = new ArrayList<>();
 	static int entradasVendidas = 0;
 
 	public static Entradas guardarEntrada(String ubicacionSeleccionada, int precioSeleccionado,
-			String compradorSeleccionado, double descuentoSeleccionado) {
+		String compradorSeleccionado, double descuentoSeleccionado) {
 		entradasVendidas++;
 		int totalEntrada = (int) (precioSeleccionado - (precioSeleccionado * descuentoSeleccionado));
 		String descuentoTexto = (int) (descuentoSeleccionado * 100) + "%";

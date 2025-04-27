@@ -1,7 +1,6 @@
 package teatromoro;
 
 public class Main {
-
 	static final String NOMBRE_TEATRO = "TEATRO MORO";
 	static final int CAPACIDAD_SALA = 60;
 	static final int PRECIO_VIP = 14000;

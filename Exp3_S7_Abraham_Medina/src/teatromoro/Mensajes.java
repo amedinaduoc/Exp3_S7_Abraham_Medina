@@ -3,8 +3,8 @@ package teatromoro;
 public class Mensajes {
 
 	public static void imprimirCentrado(String mensaje, String color) {
-
 		int espacios = Decorativo.ANCHO_CONSOLA - mensaje.length() / 2;
+		
 		String textoCentrado = String.format("%" + (espacios + mensaje.length()) + "s", mensaje);
 		System.out.print(color + textoCentrado + ColorTexto.RESET_COLOR);
 		System.out.println(color + " ".repeat(espacios) + ColorTexto.RESET_COLOR);
@@ -22,9 +22,9 @@ public class Mensajes {
 		System.out.println();
 
 		imprimirCentrado("PRECIO DE LAS ENTRADAS", ColorTexto.NEGRO_CYAN);
-		imprimirCentrado("VIP   : $" + Main.PRECIO_VIP, ColorTexto.VERDE_NEGRO);
-		imprimirCentrado("Platea: $" + Main.PRECIO_PLATEA, ColorTexto.VERDE_NEGRO);
-		imprimirCentrado("Balcón: $" + Main.PRECIO_BALCON + " ", ColorTexto.VERDE_NEGRO);
+		imprimirCentrado("VIP   : " + Decorativo.formatoPrecio.format(Main.PRECIO_VIP), ColorTexto.VERDE_NEGRO);
+		imprimirCentrado("Platea: " + Decorativo.formatoPrecio.format(Main.PRECIO_PLATEA), ColorTexto.VERDE_NEGRO);
+		imprimirCentrado("Balcón: " + Decorativo.formatoPrecio.format(Main.PRECIO_BALCON) + " ", ColorTexto.VERDE_NEGRO);
 		System.out.println();
 
 		imprimirCentrado("PROMOCIONES ", ColorTexto.NEGRO_CYAN);
@@ -38,6 +38,7 @@ public class Mensajes {
 
 	public static void mensajeFinal() {
 		String mensajeDespedida = "¡¡¡ " + Main.NOMBRE_TEATRO + " AGRADECE SU VISITA !!!";
+		
 		Decorativo.separadorLinea();
 		imprimirCentrado("-".repeat(mensajeDespedida.length()), ColorTexto.CYAN_NEGRO);
 		imprimirCentrado(mensajeDespedida, ColorTexto.VERDE_NEGRO);
