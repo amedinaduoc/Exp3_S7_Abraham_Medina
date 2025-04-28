@@ -22,13 +22,13 @@ public class Mensajes {
 		System.out.println();
 
 		imprimirCentrado("PRECIO DE LAS ENTRADAS", ColorTexto.NEGRO_CYAN);
-		imprimirCentrado("VIP   : " + Decorativo.formatoPrecio.format(Main.PRECIO_VIP), ColorTexto.VERDE_NEGRO);
-		imprimirCentrado("Platea: " + Decorativo.formatoPrecio.format(Main.PRECIO_PLATEA), ColorTexto.VERDE_NEGRO);
-		imprimirCentrado("Balcón: " + Decorativo.formatoPrecio.format(Main.PRECIO_BALCON) + " ", ColorTexto.VERDE_NEGRO);
+		imprimirCentrado("VIP   : " + Decorativo.formatoPrecio.format(Main.PRECIO_VIP) + "   ", ColorTexto.VERDE_NEGRO);
+		imprimirCentrado("Platea: " + Decorativo.formatoPrecio.format(Main.PRECIO_PLATEA) + "   ", ColorTexto.VERDE_NEGRO);
+		imprimirCentrado("Balcón: " + Decorativo.formatoPrecio.format(Main.PRECIO_BALCON) + "  ", ColorTexto.VERDE_NEGRO);
 		System.out.println();
 
 		imprimirCentrado("PROMOCIONES ", ColorTexto.NEGRO_CYAN);
-		imprimirCentrado("Estudiante  : " + (int) (Main.DESCUENTO_ESTUDIANTE * 100) + "% dcto", ColorTexto.VERDE_NEGRO);
+		imprimirCentrado("Estudiantes : " + (int) (Main.DESCUENTO_ESTUDIANTE * 100) + "% dcto", ColorTexto.VERDE_NEGRO);
 		imprimirCentrado("Tercera Edad: " + (int) (Main.DESCUENTO_TERCERAEDAD * 100) + "% dcto",
 				ColorTexto.VERDE_NEGRO);
 
